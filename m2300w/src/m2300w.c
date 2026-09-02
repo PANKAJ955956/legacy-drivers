@@ -1138,10 +1138,10 @@ readPkmraw (void)
 	    for (shz = 0; shz < trailLines; shz++) {	/* endschleife fuer fehlende hohenzeilen */
 		for (sbz = 0; sbz < (resBreite / 8); sbz++) {
 		    if (colorMode == 0xf0) {
-			doEncode (c, colorKey[ccs]);
+			doEncode (0x00, colorKey[ccs]);
 		    }
 		    else {
-			doEncode (c, colorKey[3]);
+			doEncode (0x00, colorKey[3]);
 		    }
 		}
 	    }
